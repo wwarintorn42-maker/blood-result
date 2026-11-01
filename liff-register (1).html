@@ -133,7 +133,7 @@ async function submitForm(){
       $('err').textContent = data.message || 'ไม่พบข้อมูล กรุณาตรวจสอบอีกครั้ง';
     }
   }catch(e){
-    $('err').textContent = 'เชื่อมต่อไม่ได้ กรุณาลองใหม่อีกครั้ง';
+    $('err').textContent = 'เชื่อมต่อไม่ได้: ' + e.message;
   }
   $('submitBtn').textContent = 'ยืนยันตัวตน';
   checkReady();
